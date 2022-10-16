@@ -29,7 +29,7 @@
         <a class="nav-link" href="#">Register</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">market</a>
+        <a class="nav-link" href="#">Products</a>
     </li>
 </ul>
   </div>
@@ -48,18 +48,22 @@
             <th scope="col">quantity</th>
             <th scope="col">price</th>
             <th scope="col">Location</th>
-
+            <th scope="col">Options</th>
         </tr>
     </thead>
     <tbody>
         <!-- rows inside the table HERE: -->
         {% for item in items %}
-        <tr>
-                <td>Value for productID</td>
-                <td>Value for item_name</td>
-                <td>Value for quantity</td>
-                <td>Value for price</td>
-                <td>Value for Location</td>
+            <tr>
+                <td>{{ item.productID }}</td>
+                <td>{{ item.item_name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.Location }}</td>
+                <td>
+                    <button class="btn btn-outline btn-info">More Information</button>
+                    <button class="btn btn-outline btn-success">Purchase This Item</button>
+                </td>
             </tr>
         {% endfor %}
 
